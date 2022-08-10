@@ -43,6 +43,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         holder.binding.tvTitle.setText(news.title);
         holder.binding.tvDescription.setText(news.description);
         Picasso.get().load(news.image).fit().into(holder.binding.ivThumbnail);
+
         // Implementação da funcionalidade de "Abrir Link":
         holder.binding.btOpenLink.setOnClickListener(view -> {
             Intent i = new Intent(Intent.ACTION_VIEW);
@@ -56,6 +57,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             i.putExtra(Intent.EXTRA_TEXT, news.link);
             context.startActivity(Intent.createChooser(i, "Share"));
         });
+
         // Implementação da funcionalidade de "Favoritar" (o evento será instanciado pelo Fragment):
         holder.binding.ivFavorite.setOnClickListener(view -> {
             news.favorite = !news.favorite;

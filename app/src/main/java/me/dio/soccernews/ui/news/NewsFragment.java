@@ -14,7 +14,7 @@ import me.dio.soccernews.MainActivity;
 import me.dio.soccernews.databinding.FragmentNewsBinding;
 import me.dio.soccernews.ui.adapters.NewsAdapter;
 
-public class NewsFragment extends Fragment {
+public class  NewsFragment extends Fragment {
 
     private FragmentNewsBinding binding;
 
