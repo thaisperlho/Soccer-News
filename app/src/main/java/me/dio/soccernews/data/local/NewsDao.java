@@ -10,7 +10,7 @@ import java.util.List;
 import me.dio.soccernews.domain.News;
 
 @Dao
-public interface  NewsDao {
+public interface   NewsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void save(News news);
 
